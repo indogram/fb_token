@@ -60,7 +60,7 @@ sign_creator($data);
 if($typeg == '1'){
 	$response = cURL('GET', false, $data);
 	$token = json_decode($response,true);
-	if($token[access_token]){
+	if($token["access_token"]){
 		echo"\e[1;32m  | Success..\n";
 		echo"\n\e[0m".$response."\n\n";
 	}else{
