@@ -3,9 +3,6 @@ header('Origin: https://facebook.com');
 define('API_SECRET', 'c1e620fa708a1d5696fb991c1bde5662');
 define('BASE_URL', 'https://api.facebook.com/restserver.php');
 
-$CY="\e[36m"; $GR="\e[2;32m"; $OG="\e[92m"; $WH="\e[37m"; $RD="\e[31m"; $YL="\e[33m"; $BF="\e[34m"; $DF="\e[39m"; $OR="\e[33m"; $PP="\e[35m"; $B="\e[1m"; $CC="\e[0m";
-$BL="\e[0;30m";
-
 function sign_creator(&$data){
 	$sig = "";
 	foreach($data as $key => $value){
@@ -72,6 +69,8 @@ if($typeg == '1'){
 		echo"\n\n";
 	}
 }else{
+	echo"\n\e[0m";
 	exit(BASE_URL.http_build_query($data));
+	echo"\n\n";
 }
 ?>
